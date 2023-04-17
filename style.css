@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates&display=swap'); /*importando a fonte Montserrat*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@700&family=Poppins&family=Roboto+Condensed&display=swap');
+
+
+*{
+    margin: 0;
+    size: 0;
+    box-sizing: border-box;
+    padding: 0;
+    text-decoration: none;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-size: 100%;
+}
+
+.cabecalho{
+    background: rgb(4,0,70); /*Define a cor base do background*/
+    background: linear-gradient(90deg, rgba(4,0,70,1) 0%, rgba(9,9,121,1) 35%, rgba(0,157,189,1) 100%); /*Define o gradiente entre cor base até a cor que se deseja*/
+    display: flex;
+    flex-wrap: wrap; /*Responsividade para o cabeçalho*/
+    flex-direction: row;
+    align-items: center; /*Alinha os itens entre o topo e o rodapé. Centraliza verticalmente*/
+    justify-content: space-around; /*Alinha os itens horizontalmente*/
+    padding: 18px; /*Distância entre os itens do cabeçalho para o top e o bottom do cabeçalho*/
+}
+
+.logo{
+    height: 40px; /*Redimensionando a logo do IFAM que esta no cabeçalho*/
+}
+
+.menu{
+    display: flex;
+    gap: 32px; /*Definindo a distância entre os itens do menu, que estão na flexbox. Como se fosse o border-spacing (css) ou o cellspacing (html) para tabelas*/
+}
+
+.menuItem{ 
+    color: white; /*Colorindo os textos do menu de navegação como brancos*/
+    font-family:'Montserrat Alternates', sans-serif; /*Definindo o estilo da fonte para o texto do menu de navegação*/
+    font-size: medium; /*Declarando a o tamanho da fonte*/
+}
+
+.botaoFormatura{ /*botão do cabeçalho*/
+    border: 10px solid transparent;
+    border-radius: 20px;
+    background-color: snow;
+    color: black;
+    font-family: 'Montserrat Alternates', sans-serif;
+}
+
+.principal{ /*seção principal do site, aonde os conteúdos estão*/
+    background-color: #d5fefd;
+    background-image: linear-gradient(315deg, #d5fefd 0%, #fffcff 74%); /*Gradiente da seção principal*/
+    
+}
+
+.secao{
+    padding: 67px 32px 32px 67px; /*margens: cima, direita, baixo, esquerda*/
+}
+
+.banner{
+    width: 100%; /*Ajuste do tamaho do banner para ocupar toda a largura da tela*/
+    border-bottom: 3px solid #00418b;
+}
+
+#campusParintins{ /*seção que trata do Campus Parintins. Engloba a imagem de jornal e o texto sobre o Campus.*/
+    display: flex;
+    flex-direction: row; /*propriedade padrão do flex-direction é row*/
+    align-items: stretch; /*Deixa os itens da flexbox com a mesma altura. Iguala a altura.*/ 
+    justify-content: space-around;
+}
+
+.jornal{
+    height: 350px;
+    background: linear-gradient(white, white) padding-box, linear-gradient(to right, rgba(0,104,237,1) 0%,rgba(6,6,134,1) 35%, rgba(0,157,189,1) 100%) border-box;
+	border-radius: 30px;
+	border: 3px solid transparent;
+}
+
+.divCampus{
+    border-top: solid 1px #00418b; /*Dá o efeito da linha acima do texto que fala sobre o Campus*/
+    width: 500px;
+    border-bottom: solid 1px #00418b; /*Dá o efeito da linha acima do texto que fala sobre o Campus*/
+}
+
+#tituloCampusParintins{
+   text-align: center; /*Alinha o título no centro da div*/
+   font-family: 'Montserrat Alternates', sans-serif;
+   background-image: linear-gradient(to bottom, #00d2ff 0%, #3a47d5 100%); /*Gradiente do título - início*/
+   background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; /*Gradiente do título - final*/
+   padding: 6px 0px 24px 0px; /*Espaçamento do título para o topo da div e para o texto que o segue, respectivamente*/
+}
+
+.paragrafoCampusParintins{
+    text-align: justify; /*Alinhamento "justificado" em relação à div*/
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+}
+
+#detalhes{
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: space-around;
+}
+
+.tabelaDetalhes{
+    border-spacing: 0px; /*Distância entre as células da tabela*/
+    padding: 0px; /*Distância entre do conteúdo e a célula que ele esta. */
+    width: 1200px;
+    height: 300px;
+    border-radius: 30px;
+	border: 1px solid transparent;
+    font-family: 'Poppins', sans-serif; /*Define a fonte dos títulos e dos conteúdos da tabela. Para colocar uma fonte para cada um, é preciso um font-family para cada um*/
+}
+
+.tabelaDetalhes th{
+    text-align: center;
+    font-size: 30px;
+    width: 400px; /*É preciso para garantir que os cabeçalhos fiquem com o mesmo espaço. Nesse caso, três cabeçalhos para uma tabela com 1200px de largura = 400px para cada cabeçalho*/
+}
+
+.tabelaDetalhes td{
+    text-align: justify;
+    font-size: 16px;
+    padding: 0px 13px 0px 13px;
+    width: 400px; /*É preciso para garantir que as célula fiquem com o mesmo espaço. Nesse caso, três célula para uma tabela com 1200px de largura = 400px para cada célula*/
+}
+
+.tabelaDetalhes tr:nth-child(n){ 
+    background-color: rgb(#0700b8);
+    background: linear-gradient(90deg, #0700b8 0%, #0CAFFF 50%, #0700b8 100%); /*Gradiente para a tabela*/
+    color: white; /*Cor da fonte das tabelas*/
+}
+
+.tabelaDetalhes th:nth-child(1){ /*Modelando as bordas - início*/
+    border-top-left-radius: 30px;
+}
+
+.tabelaDetalhes th:nth-child(3){
+    border-top-right-radius: 30px;
+}
+
+.tabelaDetalhes td:nth-child(1){
+    border-bottom-left-radius: 30px;
+}
+
+.tabelaDetalhes td:nth-child(3){ /*Modelando as bordas - final*/
+    border-bottom-right-radius: 30px;
+}
+
+.hr{ /*Estilizando a linha para dar efeito de separação*/
+    border: solid 1px #00418b;
+    width: 800px;
+    margin: 0px auto;
+}
+
+.rodape{
+    background: rgb(4,0,70);
+    background: linear-gradient(90deg, rgba(4,0,70,1) 0%, rgba(9,9,121,1) 35%, rgba(0,157,189,1) 100%);
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: left; /*Alinha os itens entre o topo e o rodapé. Centraliza verticalmente*/
+    justify-content: flex-start; /*Alinha os itens horizontalmente*/
+    padding: 18px;
+}
+
+.tabelaRodape{
+    border-spacing: 0px;
+    padding: 0px;
+    font-family: 'Poppins', sans-serif;
+    color: grey;
+    text-decoration: none;
+}
+
+.tabelaRodape th{
+    color: white;
+    text-align: left;
+    width: 200px;
+}
+
+.tabelaRodape td{
+    font-family:'Montserrat Alternates', sans-serif;
+    padding-top: 10px;
+}
+
+.tabelaRodape a:link{
+    color: grey;
+    text-decoration: none;
+}
+
+.tabelaRodape a:visited{
+    color: grey;
+    text-decoration: none;
+}
+
+.tabelaRodape a:hover{
+    color: white; /*Experimentar fazer gradiente (semelhante ao título do texto Campus Parintins) para os links de redes sociais com as respectivas cores de cada mídia*/
+    text-decoration: underline;
+}
